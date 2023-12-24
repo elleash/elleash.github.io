@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- linked bootstrap, stylesheet, and javascript file -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <script src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js'></script>
+    <script src="https://kit.fontawesome.com/16fe8e1872.js" crossorigin="anonymous"></script>
+    <script src="reveal.js"></script>
+    <link rel="stylesheet" href="artg.css">
+    <title>Creative Minds</title>
+</head>
+<body>
+  <!-- designing the landing page -->
+  <div class = 'bg-image ' id = 'home'> 
+    <!-- adding an empty div to mask the bg image -->
+      <div class="mask">
+        <!-- used bootstrap navigation bar -->
+          <nav class="navbar navbar-expand-lg">
+
+              <div class="container-fluid">
+                <!-- dissapear class to call the javascript -->
+                <a class="navbar-brand fs-2 ms-3 dissapear text-light">CREATIVE MINDS</a>
+      
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+      
+                <div class="collapse navbar-collapse " id="navbarNav">
+      
+                  <ul class="navbar-nav ms-auto fs-5">
+                    <li class="nav-item">
+                      <a class="nav-link text-light" href="#about">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-light" href="#featured">FEATURED</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-light" href="#contact">CONTACT US</a>
+                    </li>
+                  </ul>
+      
+                </div>
+                
+              </div>
+          </nav>
+          <!-- created a flexbox for the landing page text -->
+          <div class="d-flex justify-content-center align-items-center text-center h-75">
+              <!-- reveal class to activate the javascript -->
+              <!-- adding span tags to separate elements -->
+              <h1 id = 't1' class="text-light">WHERE <span class = 'revealvert text-warning'>CREATIVE MINDS</span>
+                <br>HAVE A CHANCE ON THE <span id = 'blinking'>SPOTLIGHT</span></h1>
+          </div>
+      </div>
+  </div>
+  <!-- about section -->
+  <section id = 'about' class = 'mt-5'>
+    <div class = 'container'>
+      <!-- using flexbox grid to make the website responsive with proper layout -->
+      <div class="row">
+        <!-- container for the images -->
+        <div class="col-lg-6">
+          <!-- using bootstrap's image carousel with automatic sliding -->
+          <div id="carouselExampleSlidesOnly" class="carousel slide revealhoriz" data-bs-ride="carousel" data-bs-interval="2000">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="pexels-leah-kelley-952590.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="pexels-beyzanur-k-17550492.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="pexels-suzy-hazelwood-3004909 (1).jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- container for the text -->
+        <!-- using bootstrap for cleaner styling -->
+        <div class=" abot-text col-lg-6 p-3 revealvert">
+          <h2 class = 'lh-lg fw-bold'>WHO ARE WE?</h2>
+          <p id = 'about-p'>An art gallery based in Dubai, Creative Minds is not only an establishment that showcases the genius painters of the old times
+            but also gives light to the new generation of artists.<br> Our goal is to raise the voices of various different artists and give them
+            the chance to put their art out to the world.
+          </p>
+          <a id = 'location' class = 'text-center text-dark text-decoration-none p-2 lh-lg' href="https://www.louvreabudhabi.ae/en/uae">FIND US!</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- section for the featured artist -->
+  <section id = 'featured'>
+    <!-- container for the heading -->
+    <div class="container">
+      <!-- span tag to customize element in stylesheet -->
+      <h2 class = 'lh-lg fw-bold text-center text-dark fs-1'> WEEKLY FEATURED <span id = 'artist'>ARTIST</span></h2>
+    </div>
+
+    <!-- container for the images -->
+    <!-- using flexbox grid for clean responsive layout -->
+    <div id = 'card' class="row row-cols-1 row-cols-lg-3 g-4 mx-auto mt-4">
+      <!-- first card -->
+      <div class="col revealhoriz">
+        <img src="pexels-irina-iriser-1005711.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <!-- calling icon pack to display the social -->
+          <h5 class="card-title lh-lg fs-3">IRINA IRISER<a href="#"><i class="fa-brands fa-instagram ms-2 fs-4"></i></a></h5>
+          <p class="card-text">Irina has been painting since she was five years old and has always dreamed of getting her paintings set up
+            on a gallery. Check her out on our showcase today!
+          </p>
+        </div>
+      </div>
+      <!-- second card -->
+      <div class="col revealvert">
+        <img src="pexels-silvia-772650.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <!-- calling icon pack to display the social -->
+          <h5 class="card-title lh-lg fs-3"">SILVIA<a href="#"><i class="fa-brands fa-instagram ms-2 fs-4"></i></a></h5>
+          <p class="card-text">Feeling creative, Silvia took the oppurtunity to turn a blank wall into 
+            a painting of a winged fish. This mural is just one of the many art they have created! You can see their other works
+          in our showcase today.</p>
+        </div>
+      </div>
+      <!-- third card -->
+      <div class="col revealhoriz">
+        <img src="pexels-viktoria-goda-1107574.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <!-- calling icon pack to display the social -->
+          <h5 class="card-title lh-lg fs-3"">VIKTORIA GODA<a href="#"><i class="fa-brands fa-instagram ms-2 fs-4"></i></a></h5>
+          <p class="card-text">Viktoria's take on a self-portraits runs a little different as seen on her paintings. She is most commonly known
+            for her non-traditional self-portrait art which can be spotted at today's showcase!
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+  <!-- contact form section -->
+  <section id = 'contact' class = 'mt-5'>
+    <!-- adding bg image and masking it -->
+    <div class = 'bg-image2'>
+      <div class="mask">
+        <!-- container for the heading -->
+        <div class="container pt-5">
+          <h2 class = 'text-center text-light fs-1'>CONTACT US</h2>
+        </div>
+        <!-- container for the form -->
+        <div class="container mt-5 revealhoriz" id = 'contact-form'>
+          <!-- using flexbox grids for clean responsive layout -->
+          <div class="row">
+
+            <div class="col-lg-6 bg-light border-end controw">
+
+              <div class="mb-4 mt-4 ">
+                <!-- span tag to customize text in stylesheet -->
+                <h4 class = 'text-center fs-2'>Send Us a Message<span class="pulse">!</span></h4>
+              </div>
+              <!-- using bootstrap input forms -->
+              <div class="mb-3">
+                <label class="form-label ">Email address</label>
+                <input type="email" class="form-control w-75" placeholder="name@example.com">
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Write your message</label>
+                <textarea class="form-control w-75"></textarea>
+              </div>
+
+              <div class="mb-3">
+                <button type="submit" class="btn btn-primary mb-3">Confirm identity</button>
+              </div>
+
+            </div>
+            <!-- information container -->
+            <div class="col-lg-6 bg-light">
+              
+              <div class="mb-4 mt-4">
+                <h4 class = 'text-center fs-2'>Find Us<span class="pulse">!</span></h4>
+              </div>
+
+              <div class="mt-5">
+                <p class = 'text-center mb-3'><i class="fa-solid fa-location-dot me-3"></i>Akshya Nagar 1st Block 1st Cross<br>Dubai, UAE</p>
+                <p class = 'text-center mb-3'><i class="fa-solid fa-phone me-3"></i>+97168580206</p>
+                <p class = 'text-center mb-3'><i class="fa-solid fa-envelope me-3"></i>cminds@gmail.com</p>
+                <p class = 'text-center mb-3'><i class="fa-brands fa-instagram"></i> / <i class="fa-brands fa-twitter me-3"></i>c_minds</p>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

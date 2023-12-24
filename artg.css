@@ -1,0 +1,171 @@
+/* import fonts from google */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&family=Ubuntu+Mono&display=swap');
+
+/* adding fonts to specified tags */
+nav, h2, h5, h4, .btn{
+    font-family: 'Ubuntu Mono', monospace;
+}
+#t1, #blinking, p, label, #location{
+    font-family: 'Inconsolata', monospace;
+}
+/* creating hover animation */
+.nav-item{
+    margin-right: 20px;
+    position: relative;
+}
+.nav-item::after{
+    content: '';
+    opacity: 0;
+    height: 2px;
+    width: 100%;
+    transition: ease 0.2s;
+    background-color: white;
+    position: absolute;
+}
+.nav-item:hover::after{
+    opacity: 1;
+}
+/* adding background images to the containers */
+.bg-image{
+    background-image: url(background-6556413_1920.jpg);
+    height: 100vh;
+}
+.bg-image2{
+    background-image: url(pexels-steve-johnson-2179389.jpg);
+    height: 100vh;
+}
+/* adding a color overlay */
+.mask{
+    background-color: rgba(0, 0, 0, 0.678);
+    height: 100vh;
+}
+/* created a blinking animation */
+#blinking{
+    animation: blink 3s linear infinite;
+}
+@keyframes blink{
+    12%, 24%, 35.2%, 48%, 60%, 90.5%{
+        color: gray;
+        text-shadow: none;
+    }
+
+    0%, 10%, 24.2%, 35%, 85%, 90%, 100%{
+        color: white;
+        text-shadow: 0px 0px 10px #fff;
+    }
+}
+/* increasing width */
+#about-p{
+    width: 70%;
+}
+#card{
+    width: 80%;
+}
+/* creating a hover effect for the cards to reveal its elements */
+.card-body{
+    opacity: 0;
+    transition: all .5s;
+}
+.col:hover .card-body{
+    transform: translateY(10px);
+    transition: all .5s;
+    opacity: 1;
+    margin-bottom: 20px;
+}
+/* created a color animation for the text */
+#artist{
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(40deg, #2E294E, #EFBCD5, #BE97C6, #8661C1, #4B5267);
+    background-size: 100%;
+    animation: gradient 7s ease infinite;
+}
+@keyframes gradient{
+    0%{
+        background-position: 0px 0px;
+    }
+    50%{
+        background-position: 400px 0px;
+    }
+    100%{
+        background-position: 0px 0px;
+    }
+}
+/* adding margin */
+#featured{
+    margin-top: 8%;
+}
+/* added border to the button with hover effect */
+#location{
+    border: 5px ridge rgb(196, 136, 26);
+}
+#location:hover{
+    background-color: rgb(253, 250, 212);
+    transition: all .5s;
+}
+/* adding a glow to the contact form */
+#contact-form{
+    box-shadow: 0px 0px 10px white;
+}
+/* creating style conditions to be activated in javascript */
+/* this class will reveal the elements vertically */
+.revealvert{
+    position: relative;
+    transform: translateY(-180px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+/* activates the javascript code */
+.revealvert.show{
+    transform: translateY(0px);
+    opacity: 1;
+}
+/* this class will reveal the elements horizontally */
+.revealhoriz{
+    position: relative;
+    /* lifts up the cards */
+    transform: translateX(-180px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+.revealhoriz.show{
+    transform: translateY(0px);
+    opacity: 1;
+}
+/* this class will make the element dissapear */
+.dissapear{
+    position: relative;
+    transform: translateX(0px);
+    opacity: 1;
+    transition: all 2s ease;
+}
+.dissapear.show{
+    transform: translateY(200px);
+    opacity: 0;
+}
+/* pulse animation for the tagged element */
+.pulse{
+    opacity: 0;
+    animation: ps 2s infinite;
+}
+@keyframes ps{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .abot-text{
+        text-align: center;
+    }
+    #about-p{
+        width: 100%;
+    }
+    #contact-form{
+        width: 80%;
+    }
+}
